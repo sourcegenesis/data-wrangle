@@ -40,7 +40,7 @@ activityLabels <- read.csv(paste(sourceDirectory, "activity_labels.txt", sep = "
 colnames(activityLabels) <- c("number", "ActivityName")
 fullData$V1 <-  sapply(fullData$V1, activityName)
 
-## Step 4: Label the data set with descriptive variable names. 
+## Step 3: Label the data set with descriptive variable names. 
 features <- read.csv(paste(sourceDirectory, "features.txt", sep = "/") , sep="", header = FALSE, stringsAsFactors = FALSE)[, 2]
 colnames(fullData) <- c("ActivityName", "Subject", features)
 
