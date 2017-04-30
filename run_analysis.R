@@ -48,5 +48,5 @@ colnames(fullData) <- c("ActivityName", "Subject", features)
 fullData <- fullData[, grepl(colnames(fullData), pattern = "*mean*|*std*|ActivityName|Subject")]
 
 ## Step 5 : Create and dump tidy data set to a file
-tidyDataSet <- group_by_(fullData, "ActivityName", "Subject") %>% summarise_all(.funs = c(Mean = "mean"))
+tidyDataSet <- group_by_(fullData, "ActivityName", "Subject") %>% summarise_all(.funs = c("mean"))
 write.table(tidyDataSet, file = 'tidyDataSet.txt', row.names = FALSE, quote = FALSE)
