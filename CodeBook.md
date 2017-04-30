@@ -1,4 +1,4 @@
-# Getting and Cleaning Data Project Solution
+# Getting and Cleaning Data Project Code Book
 This document describes run_analysis.R
 
 ## Helper Functions
